@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BrightPath — A modern learning platform. Built with Tailwind CSS to demonstrate utility-first design, theme customization, and responsive prefixes." />
+  <title>BrightPath — Learn Without Limits</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+
+          colors: {
+            primary: {
+              50:  '#eef2ff',    
+              100: '#e0e7ff',
+              500: '#6366f1', 
+              600: '#4f46e5',    
+              700: '#4338ca',    
+            },
+            dark:{ 
+              900: '#0f172a',    
+            },
+            muted: {
+              400: '#94a3b8',    
+              500: '#64748b',  
+            }
+          },
+
+          fontFamily: {
+            sans: ['Inter', 'Segoe UI', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
+</head>
+
+
+<body class="font-sans text-dark-800 bg-white antialiased">
+
+
+  <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+
+
+      <a href="#" class="text-xl font-bold text-primary-500 tracking-tight">
+        🎯 BrightPath
+      </a>
+
+
+      <ul class="hidden md:flex items-center gap-8">
+  
+        <li><a href="#features" class="text-sm font-medium text-muted-500 hover:text-primary-500 transition-colors">Features</a></li>
+        <li><a href="#how" class="text-sm font-medium text-muted-500 hover:text-primary-500 transition-colors">How It Works</a></li>
+        <li><a href="#testimonials" class="text-sm font-medium text-muted-500 hover:text-primary-500 transition-colors">Testimonials</a></li>
+
+        <li>
+          <a href="#cta" class="bg-primary-500 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-primary-600 transition-colors">
+            Get Started
+          </a>
+        </li>
+      </ul>
+
+
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-muted-500 hover:text-dark-800 transition-colors" aria-label="Toggle menu">
+        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </nav>
+
+
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white px-6 py-4">
+      <a href="#features" class="block text-sm font-medium text-muted-500 py-2 hover:text-primary-500 transition-colors">Features</a>
+      <a href="#how" class="block text-sm font-medium text-muted-500 py-2 hover:text-primary-500 transition-colors">How It Works</a>
+      <a href="#testimonials" class="block text-sm font-medium text-muted-500 py-2 hover:text-primary-500 transition-colors">Testimonials</a>
+      <a href="#cta" class="block bg-primary-500 text-white text-center px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-primary-600 transition-colors mt-2">Get Started</a>
+    </div>
+  </header>
+
+  <main>
+    
+    <section id="hero" class="min-h-[85vh] flex flex-col items-center justify-center text-center px-6 py-20 bg-gradient-to-b from-primary-50 to-white">
+
+
+      <div class="inline-flex items-center gap-2 bg-primary-100 text-primary-700 text-xs font-semibold px-4 py-1.5 rounded-full mb-8 animate-float">
+        <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+        Now in Public Beta
+      </div>
+
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight max-w-3xl mb-6">
+        Learn Without
+        <span class="gradient-text">Limits.</span>
+      </h1>
+
+      <p class="text-lg md:text-xl text-muted-500 max-w-xl mb-10 leading-relaxed">
+        Interactive courses, real-world projects, and a global
+        community — everything you need to master new skills.
+      </p>
+
+
+      <div class="flex flex-col sm:flex-row gap-4">
+
+
+        <a href="#cta" class="bg-primary-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-600 hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200">
+          Start Learning Free →
+        </a>
+
+        <a href="#features" class="border-2 border-gray-200 text-dark-800 px-8 py-3 rounded-full font-semibold hover:border-primary-500 hover:text-primary-500 transform hover:-translate-y-0.5 transition-all duration-200">
+          See Features
+        </a>
+      </div>
+
+      <div class="mt-16 flex flex-wrap justify-center gap-8 md:gap-16">
+ 
+        <div class="text-center">
+          <div class="text-3xl font-extrabold text-dark-800">50K+</div>
+          <div class="text-xs text-muted-400 uppercase tracking-wider mt-1">Students</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-extrabold text-dark-800">200+</div>
+          <div class="text-xs text-muted-400 uppercase tracking-wider mt-1">Courses</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-extrabold text-dark-800">4.9★</div>
+          <div class="text-xs text-muted-400 uppercase tracking-wider mt-1">Rating</div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="features" class="py-24 px-6 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+
+        <div class="text-center max-w-2xl mx-auto mb-16">
+
+          <p class="text-primary-500 text-sm font-semibold uppercase tracking-widest mb-3">Features</p>
+
+   
+          <h2 class="text-3xl md:text-4xl font-bold text-dark-800 mb-4">
+            Everything You Need to <span class="gradient-text">Succeed</span>
+          </h2>
+
+          <p class="text-muted-500 text-lg leading-relaxed">
+            Powerful tools and resources designed to make learning effective, engaging, and fun.
+          </p>
+        </div>
+
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+   
+          <div class="bg-white rounded-xl p-8 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+
+            <div class="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center text-2xl mb-5 group-hover:bg-primary-100 transition-colors">🎓</div>
+            <h3 class="text-lg font-bold text-dark-800 mb-2">Expert-Led Courses</h3>
+            <p class="text-muted-500 text-sm leading-relaxed">Learn from industry professionals with years of real-world experience and a passion for teaching.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+            <div class="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center text-2xl mb-5 group-hover:bg-primary-100 transition-colors">💻</div>
+            <h3 class="text-lg font-bold text-dark-800 mb-2">Hands-On Projects</h3>
+            <p class="text-muted-500 text-sm leading-relaxed">Build real portfolio projects as you learn. Practice with guided exercises and coding challenges.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+            <div class="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center text-2xl mb-5 group-hover:bg-primary-100 transition-colors">📊</div>
+            <h3 class="text-lg font-bold text-dark-800 mb-2">Progress Tracking</h3>
+            <p class="text-muted-500 text-sm leading-relaxed">Visual dashboards show your progress, streaks, and achievements to keep you motivated.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+            <div class="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center text-2xl mb-5 group-hover:bg-primary-100 transition-colors">🤝</div>
+            <h3 class="text-lg font-bold text-dark-800 mb-2">Community Support</h3>
+            <p class="text-muted-500 text-sm leading-relaxed">Join study groups, ask questions in forums, and connect with peers around the globe.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+            <div class="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center text-2xl mb-5 group-hover:bg-primary-100 transition-colors">📱</div>
+            <h3 class="text-lg font-bold text-dark-800 mb-2">Learn Anywhere</h3>
+            <p class="text-muted-500 text-sm leading-relaxed">Access courses on any device — desktop, tablet, or phone. Your progress syncs everywhere.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+            <div class="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center text-2xl mb-5 group-hover:bg-primary-100 transition-colors">🏆</div>
+            <h3 class="text-lg font-bold text-dark-800 mb-2">Certifications</h3>
+            <p class="text-muted-500 text-sm leading-relaxed">Earn recognized certificates upon completion. Share them on LinkedIn to boost your profile.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section id="how" class="py-24 px-6">
+      <div class="max-w-6xl mx-auto">
+
+        <!-- Reusing the same section header pattern for consistency -->
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <p class="text-primary-500 text-sm font-semibold uppercase tracking-widest mb-3">How It Works</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-dark-800 mb-4">
+            Three Simple <span class="gradient-text">Steps</span>
+          </h2>
+          <p class="text-muted-500 text-lg leading-relaxed">
+            Getting started takes less than a minute.
+          </p>
+        </div>
+
+  
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+
+          <div>
+
+            <div class="w-14 h-14 bg-primary-500 text-white rounded-full flex items-center justify-center mx-auto mb-5 text-xl font-bold">1</div>
+            <h3 class="text-lg font-bold text-dark-800 mb-2">Create an Account</h3>
+            <p class="text-muted-500 text-sm leading-relaxed">Sign up for free with just your email. No credit card needed.</p>
+          </div>
+
+          <div>
+            <div class="w-14 h-14 bg-primary-500 text-white rounded-full flex items-center justify-center mx-auto mb-5 text-xl font-bold">2</div>
+            <h3 class="text-lg font-bold text-dark-800 mb-2">Pick a Course</h3>
+            <p class="text-muted-500 text-sm leading-relaxed">Browse 200+ courses and choose the one that matches your goals.</p>
+          </div>
+
+          <div>
+            <div class="w-14 h-14 bg-primary-500 text-white rounded-full flex items-center justify-center mx-auto mb-5 text-xl font-bold">3</div>
+            <h3 class="text-lg font-bold text-dark-800 mb-2">Start Learning</h3>
+            <p class="text-muted-500 text-sm leading-relaxed">Watch videos, build projects, and earn your certification.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section id="testimonials" class="py-24 px-6 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <p class="text-primary-500 text-sm font-semibold uppercase tracking-widest mb-3">Testimonials</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-dark-800">
+            What Our Students <span class="gradient-text">Say</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+ 
+          <blockquote class="bg-white rounded-xl p-8 border border-gray-100">
+            <div class="text-yellow-400 text-lg mb-4 tracking-wider">★★★★★</div>
+            <p class="text-muted-500 text-sm leading-relaxed mb-6 italic">"BrightPath made learning web development so approachable. The projects are practical and the community is incredibly supportive."</p>
+            <footer class="flex items-center gap-3">
+    
+              <div class="w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center text-white text-sm font-bold">AK</div>
+              <div>
+                <cite class="text-sm font-semibold text-dark-800 not-italic block">Arjun Kumar</cite>
+                <span class="text-xs text-muted-400">Computer Science Student</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="bg-white rounded-xl p-8 border border-gray-100">
+            <div class="text-yellow-400 text-lg mb-4 tracking-wider">★★★★★</div>
+            <p class="text-muted-500 text-sm leading-relaxed mb-6 italic">"I switched careers from marketing to frontend development in 6 months, thanks to BrightPath's structured courses."</p>
+            <footer class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center text-white text-sm font-bold">PS</div>
+              <div>
+                <cite class="text-sm font-semibold text-dark-800 not-italic block">Priya Singh</cite>
+                <span class="text-xs text-muted-400">Frontend Developer</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="bg-white rounded-xl p-8 border border-gray-100">
+            <div class="text-yellow-400 text-lg mb-4 tracking-wider">★★★★★</div>
+            <p class="text-muted-500 text-sm leading-relaxed mb-6 italic">"The certifications I earned here helped me land interviews at top tech companies. Worth every minute invested."</p>
+            <footer class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white text-sm font-bold">RM</div>
+              <div>
+                <cite class="text-sm font-semibold text-dark-800 not-italic block">Rahul Mehta</cite>
+                <span class="text-xs text-muted-400">Software Engineer</span>
+              </div>
+            </footer>
+          </blockquote>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section id="cta" class="py-24 px-6">
+      <div class="max-w-2xl mx-auto text-center">
+
+        <h2 class="text-3xl md:text-4xl font-bold text-dark-800 mb-4">
+          Ready to Start <span class="gradient-text">Learning?</span>
+        </h2>
+        <p class="text-muted-500 text-lg leading-relaxed mb-8">
+          Join 50,000+ students already building their future with BrightPath. It's free to get started.
+        </p>
+
+        <form id="cta-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-4">
+          <label for="cta-email" class="sr-only">Email address</label>
+
+          <input
+            type="email" id="cta-email"
+            placeholder="Enter your email"
+            required
+            class="flex-1 px-5 py-3 rounded-full border-2 border-gray-200 focus:border-primary-500 focus:outline-none transition-colors text-sm"
+          />
+          <button type="submit" class="bg-primary-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-600 transition-colors text-sm">
+            Get Started
+          </button>
+        </form>
+
+        <p class="text-xs text-muted-400">Free forever for individuals · No credit card required</p>
+
+        <div id="cta-success" class="hidden mt-6 bg-green-50 text-green-700 border border-green-200 rounded-full px-6 py-3 text-sm font-semibold inline-flex items-center gap-2">
+          ✅ You're on the list! Check your inbox.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark-900 text-muted-400 py-8 px-6">
+    <div class="max-w-6xl mx-auto text-center text-sm">
+      <p>&copy; 2026 BrightPath. Built with <a href="https://tailwindcss.com" target="_blank" class="text-primary-500 hover:underline">Tailwind CSS</a> for a Web Development Lab.</p>
+    </div>
+  </footer>
+  <script>
+    // ---- MOBILE MENU TOGGLE ----
+    let menuBtn   = document.getElementById('mobile-menu-btn');
+    let mobileMenu = document.getElementById('mobile-menu');
+    let menuIcon   = document.getElementById('menu-icon');
+    let closeIcon  = document.getElementById('close-icon');
+
+    menuBtn.addEventListener('click', function () {
+      let isOpen = mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+
+    // ---- CTA FORM HANDLER ----
+    let ctaForm    = document.getElementById('cta-form');
+    let ctaSuccess = document.getElementById('cta-success');
+
+    ctaForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      ctaForm.classList.add('hidden');
+      ctaSuccess.classList.remove('hidden');
+    });
+  </script>
+
+</body>
+</html>

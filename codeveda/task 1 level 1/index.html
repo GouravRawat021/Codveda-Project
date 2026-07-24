@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LearnFlow — A simple learning platform for students. Built as a responsive landing page." />
+  <title>LearnFlow — Learn Anything, Anywhere</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Site Header & Navigation -->
+  <header class="site-header" id="site-header">
+    <nav class="navbar">
+      <a href="#" class="logo">📘 LearnFlow</a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Mobile hamburger toggle -->
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <h1>Learn Anything,<br />Anywhere.</h1>
+      <p class="hero-subtitle">
+        A free platform with interactive courses, hands-on projects,
+        and a supportive community to help you grow your skills.
+      </p>
+      <a href="#contact" class="btn">Get Started Free →</a>
+    </section>
+
+    <section class="features" id="features">
+      <h2 class="section-title">Why Choose LearnFlow?</h2>
+      
+      <div class="features-grid">
+        <article class="feature-card">
+          <span class="feature-icon">🎓</span>
+          <h3>Expert-Led Courses</h3>
+          <p>
+            Learn from industry professionals with real-world
+            experience. Every course is beginner-friendly.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">💻</span>
+          <h3>Hands-On Projects</h3>
+          <p>
+            Build real projects as you learn. Practice is the
+            best way to truly understand any concept.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">🤝</span>
+          <h3>Community Support</h3>
+          <p>
+            Join thousands of learners. Ask questions, share
+            progress, and grow together.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2 class="section-title">About LearnFlow</h2>
+      <p class="about-text">
+        LearnFlow was created with one mission: make quality education accessible
+        to everyone. Whether you're a student, a career-switcher, or just curious,
+        our bite-sized lessons and supportive community will help you reach your goals.
+      </p>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="section-title">Start Learning Today</h2>
+      <p class="contact-subtitle">Enter your email and we'll send you a free starter guide.</p>
+
+      <form class="contact-form" id="contact-form">
+        <label for="email" class="sr-only">Email address</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="you@example.com"
+          required
+        />
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="site-footer">
+    <p>&copy; 2026 LearnFlow. Made for a Web Development Lab.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

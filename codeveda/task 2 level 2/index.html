@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Explorer — JSONPlaceholder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <div class="app-container">
+    <header class="app-header">
+      <h1>API Explorer</h1>
+      <p>Fetching and filtering users from a public REST API.</p>
+    </header>
+
+    <div class="search-container">
+      <input
+        type="text"
+        id="search-input"
+        class="search-input"
+        placeholder="Search users by name..."
+        aria-label="Search users"
+      />
+    </div>
+
+    <!-- UI States -->
+    <div id="loading-state" class="state-message loading-state hidden">
+      <span class="spinner"></span> Loading users...
+    </div>
+
+    <div id="error-state" class="state-message error-state hidden">
+      <strong>Error:</strong> Something went wrong. <br />
+      <span id="error-details" class="error-details"></span>
+      <button id="retry-btn" class="retry-btn">Try Again</button>
+    </div>
+
+    <div id="empty-state" class="state-message empty-state hidden">
+      No users found matching your search.
+    </div>
+
+    <main class="results-grid" id="results-grid"></main>
+  </div>
+
+  <!-- HTML Template for a User Card -->
+  <template id="user-card-template">
+    <article class="user-card">
+      <div class="user-avatar"></div>
+      <div class="user-info">
+        <h2 class="user-name"></h2>
+        <p class="user-email"></p>
+        <p class="user-company"></p>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

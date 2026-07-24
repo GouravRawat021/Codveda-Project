@@ -1,0 +1,60 @@
+{#BUTTON COMPONENT — ui/button.html#}
+
+<button
+  type="{{ type|default:'button' }}"
+
+  {# --- ACCESSIBILITY ATTRIBUTES --- #}
+  {# aria-label: Only added if the parameter is provided.
+     Used for icon-only buttons where there's no visible
+     text for screen readers to announce. #}
+  {% if aria_label %}aria-label="{{ aria_label }}"{% endif %}
+
+  {# aria-disabled: Tells assistive technologies that this
+     button is not currently interactive, even if it's visible.
+     We use BOTH aria-disabled and the HTML disabled attribute. #}
+  {% if disabled %}aria-disabled="true" disabled{% endif %}
+
+  {# --- CSS CLASSES --- #}
+  {# We build the class string based on the variant and size
+     parameters. This is like "conditional rendering" in React
+     but using Django's template {% if %} tags. #}
+  class="
+    {# Base styles — always applied regardless of variant/size #}
+    inline-flex items-center justify-center gap-2
+    font-semibold rounded-lg
+    transition-colors duration-200
+    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
+
+    {# --- VARIANT STYLES --- #}
+    {# primary: Filled button with brand color #}
+    {% if variant == 'outline' %}
+      border-2 border-gray-300 text-gray-700
+      hover:border-indigo-500 hover:text-indigo-600
+    {% elif variant == 'ghost' %}
+      text-gray-600 hover:bg-gray-100 hover:text-gray-800
+    {% else %}
+      bg-indigo-600 text-white hover:bg-indigo-700
+    {% endif %}
+
+    {# --- SIZE STYLES --- #}
+    {% if size == 'sm' %}
+      text-sm px-3 py-1.5
+    {% elif size == 'lg' %}
+      text-base px-6 py-3
+    {% else %}
+      text-sm px-4 py-2
+    {% endif %}
+
+    {# --- DISABLED STATE --- #}
+    {% if disabled %}
+      opacity-50 cursor-not-allowed
+    {% else %}
+      cursor-pointer
+    {% endif %}
+
+    {# --- EXTRA CLASSES (optional override) --- #}
+    {{ extra_classes|default:'' }}
+  "
+>
+  {{ label|default:"Button" }}
+</button>
