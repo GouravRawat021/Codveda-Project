@@ -4,7 +4,7 @@ All the tasks I completed during the internship at Codveda
 📂 Project Structure & Tasks
 Each task builds on top of the previous one, moving from basic HTML/CSS to advanced interactions and design systems:
 
-Task 1: Responsive Landing Page (/task-1)
+Task 1: Responsive Landing Page 
 
 * What it is: A clean, mobile-first marketing/landing page.
 
@@ -14,7 +14,7 @@ Task 1: Responsive Landing Page (/task-1)
 
   
 
-Task 2: Interactive Form (/task-2)
+Task 2: Interactive Form 
 
 * What it is: A user input form with real-time feedback.
 
@@ -24,7 +24,7 @@ Task 2: Interactive Form (/task-2)
 
 
 
-Task 3: REST API Integration (/task-3)
+Task 3: REST API Integration 
 
 * What it is: A dynamic data-fetching interface.
 
@@ -34,7 +34,7 @@ Task 3: REST API Integration (/task-3)
 
 
 
-Task 4: Tailwind CSS Framework (/task-4)
+Task 4: Tailwind CSS Framework
 
 * What it is: A design system-focused redesign of the landing page.
 
@@ -44,7 +44,7 @@ Task 4: Tailwind CSS Framework (/task-4)
 
 
 
-Task 5: Advanced Animations (/task-5)
+Task 5: Advanced Animations 
 
 * What it is: Polished UI motion and scroll effects.
 
@@ -54,7 +54,7 @@ Task 5: Advanced Animations (/task-5)
 
 
 
-Task 6: Django Auth & Component Library (/task-6)
+Task 6: Django Auth & Component Library 
 
 * What it is: A full-stack backend application with a modular frontend architecture.
 
